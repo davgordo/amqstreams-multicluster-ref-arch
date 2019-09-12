@@ -135,15 +135,15 @@ keytool -keystore kafka.client.truststore.jks -alias CARoot -import -file ca.crt
 
 
 ```properties
-	security.protocol=SASL_SSL
+security.protocol=SASL_SSL
 ssl.truststore.location=kafka.client.truststore.jks
 ssl.truststore.password=test1234
 ssl.endpoint.identification.algorithm=HTTPS
 
 sasl.mechanism=SCRAM-SHA-512
 sasl.jaas.config=org.apache.kafka.common.security.scram.ScramLoginModule required \
-        username="my-user" \
-        password="gUoNKbFYIPV5";
+username="my-user" \
+password="gUoNKbFYIPV5";
 ```
 	
 5. Run a consumer in a terminal window
